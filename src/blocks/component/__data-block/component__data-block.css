@@ -1,0 +1,6 @@
+.component__data-block {
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  height: 265px;
+}

@@ -1,0 +1,17 @@
+@import url(blocks/page/page.css);
+
+@import url(blocks/components-container/components-container.css);
+
+@import url(blocks/component/component.css);
+
+@import url(blocks/component/__data-block/component__data-block.css);
+
+@import url(blocks/component/__back/component__back.css);
+
+@import url(blocks/component/__db/component__db.css);
+
+@import url(blocks/component/__front/component__front.css);
+
+@import url(blocks/component/__norm/component__norm.css);
+
+@import url(blocks/component/__text/component__text.css);
