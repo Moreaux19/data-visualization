@@ -15,3 +15,11 @@
 @import url(blocks/component/__norm/component__norm.css);
 
 @import url(blocks/component/__text/component__text.css);
+
+@import url(blocks/component/__number-value/component__number-value.css);
+
+@import url(blocks/component/_flex-container/component_flex-container.css);
+
+@import url(blocks/annotation-container/annotation-container.css);
+
+@import url(blocks/annotation-text/annotation-text.css);
