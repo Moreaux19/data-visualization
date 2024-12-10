@@ -1,6 +1,6 @@
 import calculatePercents from '/src/utils/calculatePrecents.js';
 
-export default function DataComponent({ data, dataType }) {
+export default function DataComponent({ data, dataType, valueDifference, heightValue, children }) {
   const { front, back, db } = data;
   const percents = calculatePercents(front, back, db);
 
@@ -8,7 +8,8 @@ export default function DataComponent({ data, dataType }) {
 
   return (
     <div className="component">
-      <div className="component__data-block">
+      {children}
+      <div style={{ height: `${heightValue}rem` }} className="component__data-block">
         <div
           style={{ height: `${frontPercent}%` }}
           className="component__front component_flex-container"

@@ -1,12 +1,16 @@
 import { useState, useEffect } from 'react';
 import NormComponent from './components/NormComponent';
 import DataComponent from './components/DataComponent';
+import calculateHeight from './utils/calculateHeight';
 import compareValues from './utils/compareValues';
+import ArrowComponent from './components/ArrowComponent';
 
 //Чё нужно:
 // Добавить функцию увеличения или уменьшения высоты второго и третьего блока в зависимости от разницы общей суммы числовых значений с предыдущим блоком
 
 const jsonData = 'https://rcslabs.ru/ttrp1.json';
+
+const defaultMaxHeight = 26.5;
 
 function App() {
   const [data, setData] = useState([]);
@@ -20,18 +24,39 @@ function App() {
   const { title, dev = {}, test = {}, prod = {}, norm } = data;
   const [, devType, testType, prodType] = Object.keys(data);
 
-  if (!data) {
-    return <h2>Загрузка...</h2>;
-  }
+  const normHeight = calculateHeight(dev, test, prod, defaultMaxHeight, norm);
 
+  const testDifference = compareValues(dev, test);
+  const testDifferenceRem = calculateHeight(
+    dev,
+    test,
+    prod,
+    defaultMaxHeight,
+    testDifference.value
+  );
+  const testHeight = defaultMaxHeight + testDifferenceRem;
+
+  const prodDifference = compareValues(test, prod);
+  const prodDifferenceRem = calculateHeight(
+    dev,
+    test,
+    prod,
+    defaultMaxHeight,
+    prodDifference.value
+  );
+  const prodHeight = testHeight + prodDifferenceRem;
+
+  console.log(prodHeight);
   return (
-    <div className="page">
-      <h4>Колличесвто пройденных тестов "{title}"</h4>
+    <>
+      <h1>Количество пройденных тестов "{title}"</h1>
       <div className="components-container">
         <DataComponent data={dev} dataType={devType}></DataComponent>
-        <DataComponent data={test} dataType={testType}></DataComponent>
-        <DataComponent data={prod} dataType={prodType}></DataComponent>
-        <NormComponent data={norm}></NormComponent>
+        <DataComponent data={test} dataType={testType} heightValue={testHeight}>
+          <ArrowComponent></ArrowComponent>
+        </DataComponent>
+        <DataComponent data={prod} dataType={prodType} heightValue={prodHeight}></DataComponent>
+        <NormComponent data={norm} heightValue={normHeight}></NormComponent>
       </div>
       <div className="annotation-container">
         <div style={{ '--mark-color': '#4ab6e8' }} className="annotation-mark">
@@ -44,7 +69,7 @@ function App() {
           База данных
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
