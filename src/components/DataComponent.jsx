@@ -9,14 +9,20 @@ export default function DataComponent({ data, dataType }) {
   return (
     <div className="component">
       <div className="component__data-block">
-        <div style={{ height: `${frontPercent}%` }} className="component__front">
-          {front}
+        <div
+          style={{ height: `${frontPercent}%` }}
+          className="component__front component_flex-container"
+        >
+          <p className="component__number-value">{front}</p>
         </div>
-        <div style={{ height: `${backPercent}%` }} className="component__back">
-          {back}
+        <div
+          style={{ height: `${backPercent}%` }}
+          className="component__back component_flex-container"
+        >
+          <p className="component__number-value">{back}</p>
         </div>
-        <div style={{ height: `${dbPercent}%` }} className="component__db">
-          {db}
+        <div style={{ height: `${dbPercent}%` }} className="component__db component_flex-container">
+          <p className="component__number-value">{db}</p>
         </div>
       </div>
       <p className="component__text">{dataType}</p>

@@ -1,3 +1,12 @@
 .component__norm {
-  margin: 0;
+  height: 150px;
+  width: 70px;
+  border-radius: 10%;
+  background: repeating-linear-gradient(
+    135deg,
+    #4ab6e8,
+    #4ab6e8 1rem,
+    #ffffff00 1rem,
+    #ffffff00 2rem
+  );
 }

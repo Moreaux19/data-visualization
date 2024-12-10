@@ -1,12 +1,10 @@
 import { useState, useEffect } from 'react';
 import NormComponent from './components/NormComponent';
 import DataComponent from './components/DataComponent';
+import compareValues from './utils/compareValues';
 
 //Чё нужно:
-// Определить минимум и максимум высоты каждого блока исходя из суммы их значений
-// Функция для расчёта процентного соотношения трёх числовых аргументов, она должна возвращать массив данных с новым значением аргуеметов в виде процентов.
-// Проброс этих новых значений в css файл
-// В зависимости от разницы между суммарными значениями блоков, блоки должны отличаться по фиксированной высоте
+// Добавить функцию увеличения или уменьшения высоты второго и третьего блока в зависимости от разницы общей суммы числовых значений с предыдущим блоком
 
 const jsonData = 'https://rcslabs.ru/ttrp1.json';
 
@@ -34,6 +32,17 @@ function App() {
         <DataComponent data={test} dataType={testType}></DataComponent>
         <DataComponent data={prod} dataType={prodType}></DataComponent>
         <NormComponent data={norm}></NormComponent>
+      </div>
+      <div className="annotation-container">
+        <div style={{ '--mark-color': '#4ab6e8' }} className="annotation-mark">
+          Клиентская часть
+        </div>
+        <div style={{ '--mark-color': '#aa6fac' }} className="annotation-mark">
+          Серверная часть
+        </div>
+        <div style={{ '--mark-color': '#e85498' }} className="annotation-mark">
+          База данных
+        </div>
       </div>
     </div>
   );

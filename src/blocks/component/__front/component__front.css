@@ -1,5 +1,6 @@
 .component__front {
   margin: 0;
   background: #4ab6e8;
-  border-radius: 10px 10px 0 0;
+  border-radius: 15% 15% 0 0;
+  min-height: 2.5rem;
 }
