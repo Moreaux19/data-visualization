@@ -1,7 +1,8 @@
 .component__data-block {
-  width: 80px;
+  width: 8rem;
+  height: 26.5rem;
   display: flex;
   flex-direction: column;
   justify-content: end;
-  height: 26.5rem;
+  padding-top: 1rem;
 }

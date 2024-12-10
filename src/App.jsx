@@ -50,11 +50,10 @@ function App() {
   return (
     <>
       <h1>Количество пройденных тестов "{title}"</h1>
+      <ArrowComponent></ArrowComponent>
       <div className="components-container">
         <DataComponent data={dev} dataType={devType}></DataComponent>
-        <DataComponent data={test} dataType={testType} heightValue={testHeight}>
-          <ArrowComponent></ArrowComponent>
-        </DataComponent>
+        <DataComponent data={test} dataType={testType} heightValue={testHeight}></DataComponent>
         <DataComponent data={prod} dataType={prodType} heightValue={prodHeight}></DataComponent>
         <NormComponent data={norm} heightValue={normHeight}></NormComponent>
       </div>

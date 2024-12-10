@@ -1,5 +1,30 @@
 .arrow {
-  display: block;
-  width: 130px;
+  width: 13rem;
+  height: 0.15rem;
   background-color: #898290;
+  /* position: absolute; */
+  left: 8.7rem;
+  top: 9.6rem;
+}
+
+.arrow::before,
+.arrow::after {
+  content: '';
+  position: absolute;
+  background-color: #898290;
+}
+
+.arrow::before {
+  display: block;
+  width: 0.15rem;
+  height: 30px;
+  /* height: calc(100% + 10px);
+  transform: translateY(-10px); */
+}
+
+.arrow::after {
+  display: block;
+  width: 0.1rem;
+  height: 20px;
+  left: 13rem;
 }
