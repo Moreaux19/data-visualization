@@ -12,7 +12,6 @@ export default function calculateHeight(
   const biggestTotal = Math.max(firstTotal, secondTotal, thirdTotal);
   const height = (numValue / biggestTotal) * defaultMaxHeight;
   const roundedHeight = Math.round(height * 10) / 10;
-  console.log(roundedHeight);
 
   return roundedHeight;
 }
