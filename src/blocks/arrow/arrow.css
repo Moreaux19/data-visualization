@@ -1,6 +1,6 @@
 .arrow {
   width: 13rem;
-  height: 0.15rem;
+  height: 0.2rem;
   margin-right: 2rem;
   position: relative;
   background-color: #898290;
@@ -16,14 +16,14 @@
 .arrow::before {
   content: '';
   display: block;
-  width: 0.15rem;
+  width: 0.2rem;
   height: var(--before-height);
 }
 
 .arrow::after {
   content: '';
   display: block;
-  width: 0.15rem;
+  width: 0.2rem;
   left: 100%;
   height: var(--after-height);
 }
