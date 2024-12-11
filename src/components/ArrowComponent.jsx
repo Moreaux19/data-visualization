@@ -11,24 +11,18 @@ export default function ArrowComponent({
   const settingRectangle = value => {
     let pointer = null;
     if (value > 0) {
-      pointer = <img src="./public/assets/positive.svg" alt="Plus" />;
+      pointer = <img src="./assets/positive.svg" alt="Plus" />;
       return (
-        <div
-          className="arrow__difference"
-          style={{ backgroundImage: "url('./public/assets/green.svg')" }}
-        >
+        <div className="arrow__difference" style={{ backgroundImage: "url('./assets/green.svg')" }}>
           <p className="arrow__pointer">
             {pointer} +{value}
           </p>
         </div>
       );
     } else if (value < 0) {
-      pointer = <img src="./public/assets/negative.svg" alt="Minus" />;
+      pointer = <img src="./assets/negative.svg" alt="Minus" />;
       return (
-        <div
-          className="arrow__difference"
-          style={{ backgroundImage: "url('./public/assets/red.svg')" }}
-        >
+        <div className="arrow__difference" style={{ backgroundImage: "url('./assets/red.svg')" }}>
           <p className="arrow__pointer">
             {pointer} {value}
           </p>
@@ -36,10 +30,7 @@ export default function ArrowComponent({
       );
     } else {
       return (
-        <div
-          className="arrow__difference"
-          style={{ backgroundImage: "url('./public/assets/grey.svg')" }}
-        >
+        <div className="arrow__difference" style={{ backgroundImage: "url('./assets/grey.svg')" }}>
           <p className="arrow__pointer">{value}</p>
         </div>
       );
