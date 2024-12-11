@@ -1,0 +1,5 @@
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 4.7rem;
+}

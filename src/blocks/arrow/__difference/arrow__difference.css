@@ -1,0 +1,11 @@
+.arrow__difference {
+  position: absolute;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 5.2rem;
+  height: 2.6rem;
+  left: 30%;
+  top: -1rem;
+  z-index: 1;
+}

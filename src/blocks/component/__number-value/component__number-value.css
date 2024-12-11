@@ -1,5 +1,6 @@
 .component__number-value {
   margin: auto;
+  color: #fff;
   font-size: 1.4rem;
   font-weight: bold;
 }

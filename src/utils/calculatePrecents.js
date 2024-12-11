@@ -1,3 +1,4 @@
+//Функция вычисления процентного соотношения частей в блоке
 export default function calculatePercents(firstNum, secondNum, thirdNum) {
   const total = firstNum + secondNum + thirdNum;
   if (total === 0) {

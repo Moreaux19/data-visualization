@@ -1,3 +1,4 @@
+//Функция вычисления самой большой высоты и вычисление соотношения к дефолтной максимальной суммы с переводом в Rem
 export default function calculateHeight(
   firstObject,
   secondObject,
@@ -11,5 +12,7 @@ export default function calculateHeight(
   const biggestTotal = Math.max(firstTotal, secondTotal, thirdTotal);
   const height = (numValue / biggestTotal) * defaultMaxHeight;
   const roundedHeight = Math.round(height * 10) / 10;
+  console.log(roundedHeight);
+
   return roundedHeight;
 }

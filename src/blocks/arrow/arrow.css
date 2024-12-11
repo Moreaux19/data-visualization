@@ -1,10 +1,9 @@
 .arrow {
   width: 13rem;
   height: 0.15rem;
+  margin-right: 2rem;
+  position: relative;
   background-color: #898290;
-  /* position: absolute; */
-  left: 8.7rem;
-  top: 9.6rem;
 }
 
 .arrow::before,
@@ -15,16 +14,16 @@
 }
 
 .arrow::before {
+  content: '';
   display: block;
   width: 0.15rem;
-  height: 30px;
-  /* height: calc(100% + 10px);
-  transform: translateY(-10px); */
+  height: var(--before-height);
 }
 
 .arrow::after {
+  content: '';
   display: block;
-  width: 0.1rem;
-  height: 20px;
-  left: 13rem;
+  width: 0.15rem;
+  left: 100%;
+  height: var(--after-height);
 }

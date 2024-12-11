@@ -1,13 +1,14 @@
+//Функция сравнения разницы блоков в общей сумме и возврат результат
 export default function compareValues(firstObject, secondObject) {
   const sumObjectValues = obj => Object.values(obj).reduce((sum, value) => sum + value, 0);
   const firstObjectSum = sumObjectValues(firstObject);
   const secondObjectSum = sumObjectValues(secondObject);
   const difference = secondObjectSum - firstObjectSum;
   if (difference > 0) {
-    return { value: difference, color: '#00CC99' };
+    return difference;
   } else if (difference < 0) {
-    return { value: difference, color: '#FC440F' };
+    return difference;
   } else {
-    return { value: '0', color: '#898290' };
+    return 0;
   }
 }

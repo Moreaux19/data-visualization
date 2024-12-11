@@ -1,9 +1,11 @@
 :root {
   display: flex;
   flex-direction: column;
+  font-family: 'Roboto', 'Arial', sans-serif;
   font-size: 10px;
+  color: #898290;
   background-color: #fff;
-  margin: 0 auto;
+  margin: 0 1rem;
   min-width: 90rem;
   max-width: 190rem;
 }

@@ -1,10 +1,9 @@
 .components-container {
-  margin: 0 4.7rem;
+  margin: 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 6rem;
   width: 12rem;
   max-width: 120rem;
   align-items: end;
-  padding-top: 13.2rem;
 }
