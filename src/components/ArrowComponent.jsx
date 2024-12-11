@@ -8,25 +8,14 @@ export default function ArrowComponent({
 }) {
   const containerHeightInRem = containerHeight / 10;
 
-  const isImageOne = 0;
-
-  const greenRectangle = '../../../../public/green.svg';
-  const redRectangle = '../../../../public/red.svg';
-
-  const style = {
-    backgroundImage: isImageOne
-      ? "url('../../../../public/green.svg')"
-      : "url('../../../../public/red.svg')"
-  };
-
   const settingRectangle = value => {
     let pointer = null;
     if (value > 0) {
-      pointer = <img src="/public/positive.svg" alt="Plus" />;
+      pointer = <img src="/src/images/positive.svg" alt="Plus" />;
       return (
         <div
           className="arrow__difference"
-          style={{ backgroundImage: "url('../../../../public/green.svg')" }}
+          style={{ backgroundImage: "url('/src/images/green.svg')" }}
         >
           <p className="arrow__pointer">
             {pointer} +{value}
@@ -34,11 +23,11 @@ export default function ArrowComponent({
         </div>
       );
     } else if (value < 0) {
-      pointer = <img src="/public/negative.svg" alt="Minus" />;
+      pointer = <img src="/src/images/negative.svg" alt="Minus" />;
       return (
         <div
           className="arrow__difference"
-          style={{ backgroundImage: "url('../../../../public/red.svg')" }}
+          style={{ backgroundImage: "url('/src/images/red.svg')" }}
         >
           <p className="arrow__pointer">
             {pointer} {value}
@@ -49,7 +38,7 @@ export default function ArrowComponent({
       return (
         <div
           className="arrow__difference"
-          style={{ backgroundImage: "url('../../../../public/grey.svg')" }}
+          style={{ backgroundImage: "url('/src/images/grey.svg')" }}
         >
           <p className="arrow__pointer">{value}</p>
         </div>
