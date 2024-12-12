@@ -1,11 +1,8 @@
-// import positive from '../assets/positive.svg';
-// import negative from '../assets/negative.svg';
-const green = { backgroundImage: "url('./src/assets/green.svg')" };
-const red = { backgroundImage: "url('./src/assets/red.svg')" };
-const grey = { backgroundImage: "url('./src/assets/grey.svg')" };
+import green from '../assets/green.svg';
+import red from '../assets/red.svg';
+import grey from '../assets/grey.svg';
 const negative = <img src="./src/assets/negative.svg" alt="minus" />;
-const postive = <img src="./src/assets/positive.svg" alt="plus" />;
-console.log(grey);
+const positive = <img src="./src/assets/positive.svg" alt="plus" />;
 
 export default function ArrowComponent({
   firstBlockHeight,
@@ -20,9 +17,9 @@ export default function ArrowComponent({
   const settingRectangle = value => {
     let pointer = null;
     if (value > 0) {
-      pointer = postive;
+      pointer = positive;
       return (
-        <div className="arrow__difference" style={green}>
+        <div className="arrow__difference" style={{ backgroundImage: `url(${green})` }}>
           <p className="arrow__pointer">
             {pointer} +{value}
           </p>
@@ -31,7 +28,7 @@ export default function ArrowComponent({
     } else if (value < 0) {
       pointer = negative;
       return (
-        <div className="arrow__difference" style={red}>
+        <div className="arrow__difference" style={{ backgroundImage: `url(${red})` }}>
           <p className="arrow__pointer">
             {pointer} {value}
           </p>
@@ -39,7 +36,7 @@ export default function ArrowComponent({
       );
     } else {
       return (
-        <div className="arrow__difference" style={grey}>
+        <div className="arrow__difference" style={{ backgroundImage: `url(${grey})` }}>
           <p className="arrow__pointer">{value}</p>
         </div>
       );
