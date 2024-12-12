@@ -1,8 +1,8 @@
 import green from '../assets/green.svg';
 import red from '../assets/red.svg';
 import grey from '../assets/grey.svg';
-const negative = <img src="./src/assets/negative.svg" alt="minus" />;
-const positive = <img src="./src/assets/positive.svg" alt="plus" />;
+import positive from '../assets/positive.svg';
+import negative from '../assets/negative.svg';
 
 export default function ArrowComponent({
   firstBlockHeight,
@@ -17,7 +17,7 @@ export default function ArrowComponent({
   const settingRectangle = value => {
     let pointer = null;
     if (value > 0) {
-      pointer = positive;
+      pointer = <img src={positive} alt="plus" />;
       return (
         <div className="arrow__difference" style={{ backgroundImage: `url(${green})` }}>
           <p className="arrow__pointer">
@@ -26,7 +26,7 @@ export default function ArrowComponent({
         </div>
       );
     } else if (value < 0) {
-      pointer = negative;
+      pointer = <img src={negative} alt="minus" />;
       return (
         <div className="arrow__difference" style={{ backgroundImage: `url(${red})` }}>
           <p className="arrow__pointer">
